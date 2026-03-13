@@ -5,23 +5,25 @@ import { ProjectLink } from "./link";
 
 export const metadata: Metadata = {
 	title: "Projects",
-	description: "Projects I've worked on",
+	description: "Backend projects built by Maddipati Puneet Janakiram",
 };
 
 const Projects = () => {
 	const featuredProjects = projectData.filter((project) => project.isFeatured);
+	const visibleFeaturedProjects =
+		featuredProjects.length % 2 === 0 ? featuredProjects : featuredProjects.slice(0, featuredProjects.length - 1);
+	const listProjects = projectData.filter(
+		(project) => !visibleFeaturedProjects.some((featuredProject) => featuredProject.url === project.url),
+	);
 
 	return (
 		<section>
-			<h1 className="font-semibold text-2xl mb-8 tracking-tighter">
-				Have a look at my projects / random stuff I've worked on.
-			</h1>
+			<h1 className="font-semibold text-2xl mb-8 tracking-tighter">Selected backend projects and APIs I&apos;ve built.</h1>
 
-			{/* Featured Projects - visually distinguished with pin icons */}
-			{featuredProjects.length > 0 && (
+			{visibleFeaturedProjects.length > 0 && (
 				<div className="mb-8">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-						{featuredProjects.map((project) => (
+						{visibleFeaturedProjects.map((project) => (
 							<FeaturedProjectCard
 								key={project.url}
 								name={project.name}
@@ -33,9 +35,8 @@ const Projects = () => {
 				</div>
 			)}
 
-			{/* All Projects - standard list format */}
 			<ul>
-				{projectData.map((project) => (
+				{listProjects.map((project) => (
 					<ProjectLink key={project.url} name={project.name} url={project.url} description={project.description} />
 				))}
 			</ul>

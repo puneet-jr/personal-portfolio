@@ -1,26 +1,24 @@
 export const BodyComponent = () => {
 	return (
 		<section>
-			<h1 className="font-semibold text-2xl mb-8 tracking-tighter">Hey! I&apos;m Aryan Bharti</h1>
+			<h1 className="font-semibold text-2xl mb-8 tracking-tighter">Hi, I&apos;m Maddipati Puneet Janakiram</h1>
 			<div className="prose prose-neutral dark:prose-invert">
-				<p>A bit about myself</p>
+				<p>
+					I&apos;m a backend developer focused on building reliable APIs, authentication systems, and data-heavy services
+					with TypeScript, Node.js, Express, SQL, and Redis.
+				</p>
 			</div>
 			<ul className="prose prose-neutral dark:prose-invert list-disc space-y-2 my-6 ml-2">
-				<li>
-					Tech enthusiast. Always up-to-date with current trends like reading Typescript beta notes, but mainly dwelling
-					in tech twitter etc.
-				</li>
-				<li>Backend and systems dev. I love learning about them and figuring out how they work.</li>
-				<li>Speaker. I love talking about tech, from hosting podcasts to speaking at college's open source events.</li>
-				<li>
-					Writer. I love writing technical blogs and sharing my knowledge with others, my blogs are linked in the navbar
-					above.
-				</li>
-				<li>I enjoy doing CyberSec for fun, and in my free time, I like to participate in CTFs.</li>
+				<li>Computer Science student at VIT, Vellore with hands-on backend internship and project experience.</li>
+				<li>Built REST APIs for workspaces, projects, tasks, comments, reviews, bookings, and background job workflows.</li>
+				<li>Comfortable with JWT authentication, role-based access control, input validation, Redis caching, and BullMQ.</li>
+				<li>Worked with MySQL, PostgreSQL, MongoDB, Redis, Docker, Jest, and Supertest across my projects.</li>
+				<li>Interested in scalable backend architecture, clean API design, and production-oriented engineering practices.</li>
 			</ul>
 			<div className="prose prose-neutral dark:prose-invert">
 				<p>
-					If any of the above interests you, feel free to reach out to me on my Linkedin, would love to chat!
+					I&apos;m currently looking for backend engineering opportunities. If you&apos;d like to discuss projects,
+					internships, or collaborations, reach out through LinkedIn, GitHub, or email.
 				</p>
 			</div>
 		</section>

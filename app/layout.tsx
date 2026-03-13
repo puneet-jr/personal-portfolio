@@ -10,29 +10,27 @@ import { Footer } from "./section/footer";
 import { Navbar } from "./section/navbar";
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://aryanbharti.com"),
 	title: {
-		default: "Aryan Bharti",
-		template: "%s | Aryan Bharti",
+		default: "Maddipati Puneet Janakiram",
+		template: "%s | Maddipati Puneet Janakiram",
 	},
-	description: "Engineer, developer and writer.",
-	authors: [{ name: "Aryan Bharti" }],
-	creator: "Aryan Bharti",
-	publisher: "Aryan Bharti",
+	description: "Backend developer building APIs with TypeScript, Node.js, Express, SQL, and Redis.",
+	authors: [{ name: "MADDI" }],
+	creator: "Maddipati Puneet Janakiram",
+	publisher: "Maddipati Puneet Janakiram",
 	category: "Technology",
 	openGraph: {
-		title: "Aryan Bharti",
-		description: "Engineer, developer and writer..",
-		url: "https://aryanbharti.com",
-		siteName: "Aryan Bharti",
+		title: "Maddipati Puneet Janakiram",
+		description: "Backend developer building APIs with TypeScript, Node.js, Express, SQL, and Redis.",
+		siteName: "Maddipati Puneet Janakiram",
 		locale: "en_US",
 		type: "website",
 		images: [
 			{
-				url: "https://aryanbharti.com/opengraph.png",
+				url: "/opengraph.png",
 				width: 256,
 				height: 256,
-				alt: "Aryan Bharti's portfolio website",
+				alt: "Maddipati Puneet Janakiram portfolio website",
 			},
 		],
 	},
@@ -48,9 +46,9 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Aryan Bharti",
+		title: "Maddipati Puneet Janakiram",
 		card: "summary_large_image",
-		images: "https://aryanbharti.com/opengraph.png",
+		images: "/opengraph.png",
 	},
 };
 
