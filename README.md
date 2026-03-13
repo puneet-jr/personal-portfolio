@@ -7,7 +7,7 @@ This project is a portfolio website built using Next.js, Tailwind CSS, and Frame
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/woaitsAryan/portfolio-website
+git clone https://github.com/puneetjr/personal-portfolio
 ```
 
 2. Navigate to the project directory:
