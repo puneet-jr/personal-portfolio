@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { projectData } from "@/data/project";
-import { FeaturedProjectCard } from "./featured-card";
 import { ProjectLink } from "./link";
 
 export const metadata: Metadata = {
@@ -9,35 +8,30 @@ export const metadata: Metadata = {
 };
 
 const Projects = () => {
-	const featuredProjects = projectData.filter((project) => project.isFeatured);
-	const visibleFeaturedProjects =
-		featuredProjects.length % 2 === 0 ? featuredProjects : featuredProjects.slice(0, featuredProjects.length - 1);
-	const listProjects = projectData.filter(
-		(project) => !visibleFeaturedProjects.some((featuredProject) => featuredProject.url === project.url),
-	);
-
 	return (
-		<section>
-			<h1 className="font-semibold text-2xl mb-8 tracking-tighter">Selected backend projects and APIs I&apos;ve built.</h1>
+		<section className="space-y-8">
+			<div className="space-y-3">
+				<p className="text-xs uppercase tracking-[0.24em] text-neutral-500 dark:text-neutral-400">Projects</p>
+				<h1 className="font-semibold text-2xl tracking-tighter text-neutral-950 dark:text-neutral-50">
+					Selected backend projects and APIs I&apos;ve built.
+				</h1>
+				<p className="max-w-2xl text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+					A focused set of backend systems covering auth, RBAC, Redis-powered workflows, transactional APIs, and
+					production-oriented testing.
+				</p>
+			</div>
 
-			{visibleFeaturedProjects.length > 0 && (
-				<div className="mb-8">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-						{visibleFeaturedProjects.map((project) => (
-							<FeaturedProjectCard
-								key={project.url}
-								name={project.name}
-								url={project.url}
-								description={project.description}
-							/>
-						))}
-					</div>
-				</div>
-			)}
-
-			<ul>
-				{listProjects.map((project) => (
-					<ProjectLink key={project.url} name={project.name} url={project.url} description={project.description} />
+			<ul className="space-y-4">
+				{projectData.map((project) => (
+					<ProjectLink
+						key={project.url}
+						name={project.name}
+						url={project.url}
+						description={project.description}
+						stack={project.stack}
+						highlights={project.highlights}
+						year={project.year}
+					/>
 				))}
 			</ul>
 		</section>
